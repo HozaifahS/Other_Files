@@ -1,0 +1,51 @@
+DEFINITIONS -
+
+Integers - 
+A whole number; a number that is not a fraction or decimal
+
+Floats - 
+They represent real numbers and are written with a decimal point
+
+Bool/Boolean -
+One of Python's built-in data types. It's used to represent the truth value of an expression; True or False
+
+String -
+Is a sequence of characters. It is a derived data type. Strings are immutable. This means that once defined, they cannot be changed. !!!! = ""
+
+*********************
+Variable example : 
+
+a = 16
+
+b = 17
+
+print(a)
+print(b)
+print(a + b)
+print(b - a)
+
+type(a) = should use this command in shell and get a response of <class 'int'>
+type(b) = should use this command in shell and get a response of <class 'int'>
+
+**********************
+
+String example + print("___") function :
+
+
+print("Hello World")
+
+print("How are you doing?)
+
+comment = "I'm good, thank you"
+
+type(comment) = should use this command in shell and get a response of <class 'str'>
+
+**********************
+Floats and Boolean Examples :
+
+a = 1.0
+
+b = True
+
+type(b) = should use this command in shell and get a response of <class 'float'>. Check the definition!
+type(a) = should use this command in shell and get a response of <class 'bool'>. Check the definition!
