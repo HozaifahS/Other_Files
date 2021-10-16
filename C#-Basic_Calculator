@@ -1,0 +1,79 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    string restart_calculator = "no";
+            string[] operator_array = new string[4] {"+", "-", "*", "/"};
+            int number1;
+            int number2;
+
+            do //run the program a first time and then loop it depending of the user input
+            {
+                Console.WriteLine("What type of calculation do you want to perform? (+, -, *, /)");
+                string type_of_calculation = Console.ReadLine();
+
+                Console.WriteLine("Choose the first number: ");
+                string input = Console.ReadLine();
+                
+                //verify is user input is an int before parsing
+                while(int.TryParse(input, out int n) == false)
+                {
+                    Console.WriteLine("Try again! This time with an actual number... ");
+                    input = Console.ReadLine();
+                }
+
+                number1 = Int32.Parse(input);
+                Console.WriteLine("Choose the second number: ");
+                input = Console.ReadLine();
+
+                //verify is user input is an int before parsing
+                while(int.TryParse(input, out int n) == false)
+                {
+                    Console.WriteLine("try again! This time with an actual number... ");
+                    input = Console.ReadLine();
+                }
+
+                number2 = Int32.Parse(input);
+
+                if(type_of_calculation == "+")
+                {
+                    int Add = number1 + number2;
+                    Console.WriteLine("The Answer is " + Add);
+                    Console.WriteLine("Write 'yes' to restart the calculator ");
+                    restart_calculator = Console.ReadLine();
+                }
+                else if(type_of_calculation == "-")
+                {
+                    int Subtraction = number1 - number2;
+                    Console.WriteLine("The Answer is " + Subtraction);
+                    Console.WriteLine("Write 'yes' to restart the calculator ");
+                    restart_calculator = Console.ReadLine();
+                }
+                else if(type_of_calculation == "*")
+                {
+                    int Multiplication = number1*number2;
+                    Console.WriteLine("The Answer is " + Multiplication);
+                    Console.WriteLine("Write 'yes' to restart the calculator ");
+                    restart_calculator = Console.ReadLine();
+                }
+                else if(type_of_calculation == "/")
+                {
+                    int Division = number1 / number2;
+                    Console.WriteLine("The Answer is " + Division);
+                    Console.WriteLine("Write 'yes' to restart the calculator ");
+                    restart_calculator = Console.ReadLine();
+                }
+
+                else
+                {
+                    Console.WriteLine("Unkown Error");
+                }
+            } while (restart_calculator == "yes");
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Made by 𝐻𝑜𝓏𝒶͢͢͢𝒾𝒻𝒶𝒽");
+            System.Environment.Exit(0);
+  }
+}
